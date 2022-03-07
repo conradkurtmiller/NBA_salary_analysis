@@ -38,7 +38,7 @@ I ran analysis on the _full data set_(including all players currently in the NBA
 ![alt text](https://github.com/conradkurtmiller/NBA_salary_analysis/blob/main/hm2.png)
 ![alt text](https://github.com/conradkurtmiller/NBA_salary_analysis/blob/main/pairplots_pervorp.png)
 
-As you can see, there's some notable colinearity between salary and stats like Offensive Box Plus/Minus(OBPM), Value over replacement player(VORP), Minutes per game(MPG), Usage percentage (USG), and a players age. 
+As you can see, there's some notable colinearity between salary and stats like Player Efficiency Rating(PER), Offensive Box Plus/Minus(OBPM), Value over replacement player(VORP), Minutes per game(MPG), Usage percentage (USG), and a players age. 
 
 __*As I explored the data further,*__ I wanted to isolate the NBA's role players. (Role players being non-star players, often with a higher variance in salary, and high variance in overall impact, while usually playing ~25 minutes or less a game.) Below are the same correlation plots ran on the isolated data set. Once I had taken out the stars and starters from the data, you can see the relationship on salary is much less correlated on these advanced metrics. 
 
