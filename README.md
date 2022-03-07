@@ -51,7 +51,7 @@ Model Building
 
 I built a couple of models based on this data and its correlation. I quickly recognized that this dataset is quite small, and with multiple stats having somewhat colinear correlation, it would best benefit from a linear regression. I was able to create a formula that ended up with an R-squared value of 0.580, and the formula is as follows
 
-<h3 align="center"> Player salary = -5266514 + 171312(MPG) -189684(PER) + 274808(VORP) + 163460(USG) + 762682(OBPM) + 297655(Age) </h3>
+<h3 align="center"> Player salary = -17.792054 + 261874(MPG) -224237(PER) + 2724038(VORP) + 440007(USG) + 529313(OBPM) + 557604(Age) </h3>
 
 However, when I attempted to draw up a formula to estimate role players' salaries, the highest R-squared value I could return was 0.243
 
