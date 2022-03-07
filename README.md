@@ -1,1 +1,64 @@
-# NBA_salary_analysis
+Analyzing NBA '21-'22 salaries using advanced stats: Project overview
+======
+
++ Created a linear regression formula to estimate salary in the current market based off advanced stats and metrics
+
++ Scraped statistics and salary data from basketball-reference using Python and Beautiful Soup
+
++ Used exploratory data analysis tools to identify relationships
+
+As a lifelong basketball fan, I've always been curious as to how NBA players value is truly assessed. It is obviously a league driven by superstars, and the huge salaries that come along with being one of those stars. The emergence of advanced analytics in the NBA for the past 2 to 3 decades has also been huge for tons of serious fans (and some casual) to gain further insights to a players true impact on the court. Most conversations surrounding the NBA MVP race, and player evaluation as a whole, use stats like player efficiency rating, value of replacement player, true shooting percentages, usage percentages, etc etc. 
+
+In this project, I aim to see how accurately we can estimate how players (especially "role players") are paid in the NBA using these advanced metrics.
+
+Code and resources used
+------
+
++ __Python 3.7__
+
++ __Packages:__ urllib, bs4, pandas, numpy, seaborn, statsmodels, matplotlib
+
++ __Data:__ https://www.basketball-reference.com/
+
+Web Scraping
+------
+
+Created a beautiful soup table scraper that utilized the urllib.urlopen function to pull all advanced stats and salaries from our data source online.
+
+Data Cleaning
+------
+
+After pulling our data, I merged the two dataframes together, dropped unnecesary variables, dropped duplicated information, parsed salary information, and converted all numeric variables to workable data types. There were some issues with how the tables were formatted on their website, and it is commented in the code. I had to manually format the second dataframe for further analysis.
+
+EDA
+------
+
+I ran analysis on the _full data set_(including all players currently in the NBA with available salary data), noticing a decent amount of colinearity for certain advanced statistics and how they affected players salaries. Here are some highlights on the total data set.
+
+![alt text](https://github.com/conradkurtmiller/NBA_salary_analysis/blob/main/hm2.png)
+![alt text](https://github.com/conradkurtmiller/NBA_salary_analysis/blob/main/pairplots_pervorp.png)
+
+As you can see, there's some notable colinearity between salary and stats like Offensive Box Plus/Minus(OBPM), Value over replacement player(VORP), Minutes per game(MPG), Usage percentage (USG), and a players age. 
+
+__*As I explored the data further,*__ I wanted to isolate the NBA's role players. (Role players being non-star players, often with a higher variance in salary, and high variance in overall impact, while usually playing ~25 minutes or less a game.) Below are the same correlation plots ran on the isolated data set. Once I had taken out the stars and starters from the data, you can see the relationship on salary is much less correlated on these advanced metrics. 
+
+![alt text](https://github.com/conradkurtmiller/NBA_salary_analysis/blob/main/hm1.png)
+![alt text](https://github.com/conradkurtmiller/NBA_salary_analysis/blob/main/pairplots_pervorp2.png)
+
+
+Model Building
+------
+
+I built a couple of models based on this data and its correlation. I quickly recognized that this dataset is quite small, and with multiple stats having somewhat colinear correlation, it would best benefit from a linear regression. I was able to create a formula that ended up with an Rsquared value of 0.58, and the formula is as follows
+
+<h3 align="center"> Player salary = -5266514 + 171312(MPG) -189684(PER) + 274808(VORP) + 163460(USG) + 762682(OBPM) + 297655(Age) </h3>
+
+However, when I attempted to draw up a formula to estimate role players' salaries, the highest Rsquared value I could return was .243
+
+Conclusions
+======
+
+My conclusion from this analysis is somewhat gratifying as well as frustrating.
+
+The NBA being a star driven league plays a huge part in how a player is paid. Different market sizes of different organizations, attempting to hold on to talent in certain roles, past performance, perceived potentional, and traditional stats all play a huge role in how players (and their agents) negotiate their contracts. Advanced metrics in the NBA have been used to try to equalize a player's stats across positions and roles on the floor. They are also the number 1 thing that Nikola Jokic fans love to brag about on twitter. While I think they are extremely useful in the modern nba to help steer a teams strategy, I've identified from my analysis that there's obviously much more needed than advanced metrics to evaluate a player in the current market. I'm not going to pretend to know the the daily ongoings of NBA front offices. And while I do feel good that I created a linear regression formula that can accurately predict rougly 60% of current NBA players' salaries, there is obviously much more data than advanced metrics we could use to find a players value, especially the dollar value of the NBA's role players.
+
