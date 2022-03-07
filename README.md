@@ -7,7 +7,7 @@ Analyzing NBA '21-'22 salaries using advanced stats: Project overview
 
 + Used exploratory data analysis tools to identify relationships
 
-As a lifelong basketball fan, I've always been curious as to how NBA players value is truly assessed. It is obviously a league driven by superstars, and the huge salaries that come along with being one of those stars. The emergence of advanced analytics in the NBA for the past 2 to 3 decades has also been huge for tons of serious fans (and some casual) to gain further insights to a players true impact on the court. Most conversations surrounding the NBA MVP race, and player evaluation as a whole, use stats like player efficiency rating, value of replacement player, true shooting percentages, usage percentages, etc etc. 
+As a lifelong basketball fan, I've always been curious as to how NBA players value is truly assessed. It is obviously a league driven by superstars, and the huge salaries that come along with being one of those stars. The emergence of advanced analytics in the NBA for the past 2 to 3 decades has also been huge for tons of serious fans (and some casual) to gain further insights to a players true impact on the court. Most conversations surrounding the NBA MVP race, and player evaluation as a whole, use stats like player efficiency rating(PER), value over replacement player(VORP), true shooting percentages(TS%), usage percentages(USG%), etc etc. 
 
 In this project, I aim to see how accurately we can estimate how players (especially "role players") are paid in the NBA using these advanced metrics.
 
