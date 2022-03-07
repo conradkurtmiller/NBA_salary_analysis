@@ -35,11 +35,12 @@ EDA
 
 I ran analysis on the _full data set_(including all players currently in the NBA with available salary data), noticing a decent amount of colinearity for certain advanced statistics and how they affected players salaries. Here are some highlights on the total data set.
 
-_I created a correlation heatmap to view the correlation of salary (represented by 'sal') and advanced stats_
-![alt text](https://github.com/conradkurtmiller/NBA_salary_analysis/blob/main/hm2.png)
 
-_I created pairplots to view colinearity between salary and certain advanced stats_
+![alt text](https://github.com/conradkurtmiller/NBA_salary_analysis/blob/main/hm2.png)
+_I created a correlation heatmap to view the correlation of salary (represented by 'sal') and advanced stats_
+
 ![alt text](https://github.com/conradkurtmiller/NBA_salary_analysis/blob/main/pairplots_pervorp.png)
+_I created pairplots to view colinearity between salary and certain advanced stats_
 
 As you can see, there's some notable colinearity between salary and stats like Player Efficiency Rating(PER), Offensive Box Plus/Minus(OBPM), Value over replacement player(VORP), Minutes per game(MPG), Usage percentage (USG), and a players age. 
 
@@ -47,7 +48,7 @@ __*As I explored the data further,*__ I wanted to isolate the NBA's role players
 
 ![alt text](https://github.com/conradkurtmiller/NBA_salary_analysis/blob/main/hm1.png)
 ![alt text](https://github.com/conradkurtmiller/NBA_salary_analysis/blob/main/pairplots_pervorp2.png)
-
+_You may also notice in the pairplots for the second grouping of data, the distribution of salaries is wildly different for role players_
 
 Model Building
 ------
